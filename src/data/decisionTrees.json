@@ -1,0 +1,92 @@
+{
+  "processNames": {
+    "onboarding": "Onboarding de personal",
+    "compras": "Proceso de compras"
+  },
+  "processTemplates": {
+    "onboarding": {
+      "id": "n1",
+      "label": "Inicio de onboarding",
+      "detail": "Define el tipo de contratacion del colaborador.",
+      "children": [
+        {
+          "id": "n2",
+          "label": "Contrato indefinido",
+          "detail": "Solicitar documentos y firmar contrato digital.",
+          "children": [
+            {
+              "id": "n3",
+              "label": "Documentacion completa",
+              "detail": "Crear usuario y agendar induccion.",
+              "children": []
+            },
+            {
+              "id": "n4",
+              "label": "Documentacion incompleta",
+              "detail": "Enviar alerta con requisitos faltantes.",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "n5",
+          "label": "Contrato temporal",
+          "detail": "Validar fecha fin y crear recordatorio.",
+          "children": [
+            {
+              "id": "n6",
+              "label": "Aprobado por liderazgo",
+              "detail": "Continuar al alta en nomina.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "compras": {
+      "id": "c1",
+      "label": "Solicitud de compra",
+      "detail": "Identifica monto y categoria.",
+      "children": [
+        {
+          "id": "c2",
+          "label": "Menor a 5.000 USD",
+          "detail": "Aprobacion directa del lider de area.",
+          "children": [
+            {
+              "id": "c3",
+              "label": "Proveedor registrado",
+              "detail": "Generar orden de compra.",
+              "children": []
+            },
+            {
+              "id": "c4",
+              "label": "Proveedor nuevo",
+              "detail": "Solicitar alta de proveedor en ERP.",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "label": "Mayor o igual a 5.000 USD",
+          "detail": "Requiere comite de compras.",
+          "children": [
+            {
+              "id": "c6",
+              "label": "Comite aprueba",
+              "detail": "Emitir orden y comunicar fecha de entrega.",
+              "children": []
+            },
+            {
+              "id": "c7",
+              "label": "Comite rechaza",
+              "detail": "Cerrar solicitud y registrar motivo.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
